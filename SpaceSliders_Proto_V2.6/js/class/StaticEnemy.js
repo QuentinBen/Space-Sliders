@@ -1,7 +1,8 @@
+
 var StaticEnemy = function(params)
 {
 	this.params 							 = params;
-
+	
 	this.destroyed							 = false;
 
 	this.fixStaticEnemy 			   		 = new b2FixtureDef;
@@ -18,8 +19,10 @@ var StaticEnemy = function(params)
 	this.fixStaticEnemy.shape       		= new b2CircleShape(this.params.radius);
 	this.bodyStaticEnemy.position.x 		= this.params.x;
 	this.bodyStaticEnemy.position.y 		= this.params.y;
-
+	this.range								= this.params.range;
 	this.bodyStaticEnemy = world.CreateBody(this.bodyStaticEnemy).CreateFixture(this.fixStaticEnemy);
+	
+	this.positionVector                     = new b2Vec2(this.bodyStaticEnemy.GetBody().GetPosition().x, this.bodyStaticEnemy.GetBody().GetPosition().y);
 }
 
 StaticEnemy.prototype.update = function()
@@ -28,35 +31,39 @@ StaticEnemy.prototype.update = function()
 	{
 		this.die();
 	}
+		
+}
+StaticEnemy.prototype.checkPlayerInRange = function()
+{
+		var distanceShot = Math.sqrt(Math.pow(this.params.x-player.playerCollider.GetPosition().x,2)
+						 +(Math.pow(this.params.y-player.playerCollider.GetPosition().y,2)))/2;
+        
+		if(distanceShot <= this.range)
+		{
+			this.shoot();
+		}
 
-	var x1    = player.bodyPlayer.GetBody().GetWorldCenter().x;
-	var y1    = player.bodyPlayer.GetBody().GetWorldCenter().y;
-
-	var x2    = this.bodyStaticEnemy.GetBody().GetWorldCenter().x;
-	var y2    = this.bodyStaticEnemy.GetBody().GetWorldCenter().y;
-
-	var diffX = carre(x2 - x1);
-	var diffY = carre(y2 - y1);
-
-	var distance = Math.sqrt(diffX + diffY);
-
-	if (distance < 8)
-	{
-		// this.shoot(x1, x2);
-	}
 }
 
-StaticEnemy.prototype.shoot = function()
+StaticEnemy.prototype.shoot = function(hitObject)
 {
-	if (canShoot)
-	{
+	
+	var xEnemy 		  	 = this.params.x;
+	var xPlayer 		 = player.playerCollider.GetPosition().x;
+	
+	var yEnemy 		  	 = this.params.y;
+	var yPlayer 		 = player.playerCollider.GetPosition().y;
 
-	}
+	var vecangleShoot 	 = new b2Vec2((xPlayer - xEnemy)*5, (yPlayer - yEnemy)*5);
+	
+	bulletStaticEnemyTable.push(new BulletStaticEnemy (xEnemy,yEnemy,vecangleShoot));
+	
+	
 }
 
-StaticEnemy.prototype.looseLife = function()
+StaticEnemy.prototype.looseLife = function(lostLife)
 {
-	this.params.life -= 1;
+	this.params.life -= lostLife;
 }
 
 StaticEnemy.prototype.die = function()

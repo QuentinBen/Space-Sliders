@@ -16,20 +16,20 @@ var Camera = function()
 
 	this.update = function()
 	{
-		_wrapper.scrollLeft = this.camPos.x - 400;
+		_wrapper.scrollLeft = this.camPos.x - 500;
 		_wrapper.scrollTop  = this.camPos.y - 300;
 
 		this.focusPlayer();
 
-		this.render();
+		//this.render();
 	}
 
 	this.focusPlayer = function()
 	{
-		if (player.bodyPlayer.GetBody())
+		if (player.playerCollider)
 		{
-			this.camPos.x = player.bodyPlayer.GetBody().GetWorldCenter().x*30;
-			this.camPos.y = player.bodyPlayer.GetBody().GetWorldCenter().y*30;
+			this.camPos.x = player.playerCollider.GetWorldCenter().x*30;
+			this.camPos.y = player.playerCollider.GetWorldCenter().y*30;
 		}
 	}
 }
