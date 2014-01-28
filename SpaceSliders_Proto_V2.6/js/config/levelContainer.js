@@ -38,18 +38,31 @@ function loadLevel()
 
     var interruptorDoor1 = new Square
     ({
-            x       : 39.7
-        ,   y       : 43
-        ,   w       : 0.3
-        ,   h       : 2
-        ,   needInt : true
-        ,   type    : "kinematic"
-        ,   CAT     : CATEGORY_SCENERY
-        ,   MASK    : MASK_SCENERY
-        ,   tag     : "SCENERY"
+            x         : 39.7
+        ,   y         : 43
+        ,   w         : 0.3
+        ,   h         : 2
+        ,   needInt   : true
+        ,   linkedInt : 1
+        ,   type      : "kinematic"
+        ,   CAT       : CATEGORY_SCENERY
+        ,   MASK      : MASK_SCENERY
+        ,   tag       : "SCENERY"
     });
 
     doorsTable.push(interruptorDoor1);
+
+    var interruptor1 = new Square
+    ({
+            x          : 38
+        ,   y          : 58.2
+        ,   w          : 0.4
+        ,   h          : 0.4
+        ,   linkedDoor : 1
+        ,   type       : "kinematic"
+    });
+
+    interruptorsTable.push(interruptor1);
 
     var plafond = new Square
     ({

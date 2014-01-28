@@ -4,7 +4,8 @@ var Interruptor = function(params, linkedDoor)
     this.y                                       = params.y;
     this.linkedDoor                              = linkedDoor;
 
-    this.activated                               = false;
+    this.activated                               = false; //Bool to open the linked door
+
     this.InterruptorCollider                     = new InterruptorCollider(this, this.params);
 }
 
@@ -15,9 +16,6 @@ var InterruptorCollider = function(_self, _params)
     this.fixInterruptor.density                  = this.params.d  || 1;
     this.fixInterruptor.friction                 = this.params.f  || 0;
     this.fixInterruptor.restitution              = this.params.r  || 0;
-    this.fixInterruptor.filter.categoryBits      = this.params.CAT;
-    this.fixInterruptor.filter.maskBits          = this.params.MASK;
-    this.fixInterruptor.userData                 = {tag : this.params.tag, obj : this};
 
     this.bodyInterruptor                         = new b2BodyDef;
     this.bodyInterruptor.type                    = b2Body.b2_kinematicBody;

@@ -36,7 +36,7 @@ function init()
 
     var staticEnemy1 = new StaticEnemy
     ({
-            x      : 37
+            x      : 36
         ,   y      : 58.2
         ,   life   : 4
 		,   radius : 0.8
@@ -139,7 +139,7 @@ function init()
 		   
 		{
 			contact.GetFixtureA().GetUserData().obj.hasCollideWall = true;
-			alert("Try Again!");
+			console.log("Try Again!");
 		}
 		
 	}

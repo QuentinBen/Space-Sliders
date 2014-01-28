@@ -1,15 +1,16 @@
 var Square = function(params)
 {
 	this.params 			  			= params;
-	this.angle 				            = params.angle   || 0;
-	this.life							= params.life 	 || null;
+	this.angle 				            = params.angle     || 0;
+	this.life							= params.life 	   || null;
 	this.destroyed 						= false;
-	this.needInterruptor                = params.needInt || false;
+	this.needInterruptor                = params.needInt   || false;
+	this.linkedInt						= params.linkedInt || null;
 
 	this.fixSquare 			   			= new b2FixtureDef;
-	this.fixSquare.density 	   			= this.params.d  || 1.0;
-	this.fixSquare.friction    			= this.params.f  || 0.7;
-	this.fixSquare.restitution		    = this.params.r  || 0.2;
+	this.fixSquare.density 	   			= this.params.d    || 1.0;
+	this.fixSquare.friction    			= this.params.f    || 0.7;
+	this.fixSquare.restitution		    = this.params.r    || 0.2;
 	this.fixSquare.filter.categoryBits  = this.params.CAT;
 	this.fixSquare.filter.maskBits      = this.params.MASK;
 	this.fixSquare.userData             = {tag : this.params.tag, obj: this};
@@ -42,14 +43,16 @@ var Square = function(params)
 		if (!this.needInterruptor)
 		{
 			if (this.life <= 0)
+			{
 				this.die();
+			}
 		}
 	}
 
 	this.die = function()
 	{
-		world.DestroyBody(this.bodySquare.GetBody());
 		this.destroyed = true;
+		world.DestroyBody(this.bodySquare.GetBody());
 	}
 
 	this.looseLife = function()

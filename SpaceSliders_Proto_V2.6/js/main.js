@@ -30,7 +30,7 @@ function update()
 			bulletTable.splice(i, 1);
 		}
 	}
-	///// update bullets //////////
+	///// update bullets ennemies//////////
 	for (i = 0; i < bulletStaticEnemyTable.length; i++)
 	{
 		
@@ -41,6 +41,7 @@ function update()
 			bulletStaticEnemyTable.splice(i, 1);
 		}
 	}
+
 	///// update player /////////
 	player.update();
 	
@@ -61,6 +62,7 @@ function update()
 	{
 		checkPlatformPosition();
 	}
+
 	////////// Static Enemies (tourelles)///////////////////////
 	for (i = 0; i < staticEnemiesTable.length; i++)
 	{
@@ -94,7 +96,6 @@ function update()
 	 	EndRayPlatform = new b2Vec2(mouseX/30, mouseY/30);
 		
 		world.RayCast(setLineColor, StartRayPlatform, EndRayPlatform);
-
 	}
 	
 	///// décompte avant de passer player.reverseSliding en false ////////
@@ -113,16 +114,16 @@ function update()
 	{
 		doorsTable[i].update();
 
+		if (!doorsTable[0].destroyed)
+		{
+			context.font      = "15px Calibri";
+			context.fillStyle = "white";
+			context.fillText("I must break dat Door !", player.playerCollider.GetPosition().x*30 - 30, player.playerCollider.GetPosition().y*30 - 30);
+		}
+
 		if(doorsTable[i].destroyed)
 		{
 			doorsTable.splice(i, 1);
-		}
-		
-		if (!doorsTable[0].destroyed)
-		{
-			context.font = "15px Arial";
-			context.fillStyle = "white";
-			context.fillText("I must break dat Door !", player.playerCollider.GetPosition().x*30 - 30, player.playerCollider.GetPosition().y*30 - 30);
 		}
 	}
 	
