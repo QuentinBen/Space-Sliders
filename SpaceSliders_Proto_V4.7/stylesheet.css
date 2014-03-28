@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Arkitech_normal";
+	src: url('Arkitech_bold.eot');
+    src: url('images/Fonts/Arkitech_bold.ttf') format('truetype'),;
+}
+@font-face {
+    font-family: "Arkitech_bold";
+    font-weight: bold;
+    src: url('images/Fonts/Arkitech_Bold.ttf') format('truetype'),;
+}
+
+@font-face {
+    font-family: 'Akashi';
+    src: url('images/Fonts/Akashi.eot');
+    src: url('images/Fonts/Akashi.eot?#iefix') format('embedded-opentype'),
+         url('images/Fonts/Akashi.woff') format('woff'),
+         url('images/Fonts/Akashi.ttf') format('truetype'),
+        
+    font-weight: normal;
+    font-style: normal;
+
+}

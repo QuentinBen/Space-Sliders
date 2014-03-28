@@ -1,0 +1,110 @@
+
+Changements apportés par la v1.10 : 
+
+* Indicateur de tracé de plateforme : vert --> peut construire
+				      Rouge --> ne peut pas construire
+
+* Plateformes ne peuvent pas traverser des éléments du décor
+
+* Ajustement de la taille de plateformes dessinées (avant les plateformes penchées ne prenaient pas la bonne dimension)
+
+
+
+chagements apportés par la version 2.6 :
+
+* possibilité de switcher à l'envers/à l'endroit sur les plateformes dessinée
+
+* vitesse de slide régulée
+
+* switch de type d'arme avec les touches 1,2,3,4 
+
+* armes avec cadence de tir, portée, vitesse, forme de tir et dégâts différents
+
+* Jauge de munition, qui se remplit avec le temps
+
+
+
+changements apportés par la version 2.7 :
+
+* Ajustement des tirs ennemis et codage propre de la classe staticEnemy (tourelles)
+
+* Ajout d'une seconde pièce pour le proto
+
+
+changements apportés par la version 2.8 :
+
+* Ajustement des sauts du joueur (saut désormais impossibles sur ses propres tirs et sauts pendant slide débuggés)
+
+* Classe laser 
+
+
+changements apportés par la version 2.9 :
+
+* Achevement pièges lasers et mines
+
+* Amelioration systeme de création des ennemis
+
+* mort des personnages touchés et invicibilité temporaire du joueur aprés mort d'un personnage 
+
+
+changements apportés par la version 2.10 :
+
+* Création collectibles et score du joueur
+
+* Explosion tir avec roquette
+
+* taille minimale et nombre de plateformes limités
+
+* le joueur peut maintenant entamer un slide à l'envers
+
+* le joueur ne peut plus inverser sa position sur le slide s'il n'a pas la place
+
+* Ennemis kamikazes
+
+* Champ de vision des ennemis (n'attaquent plus le joueur s'ils ne peuvent pas le voir
+
+* début intégration HUD des personnages
+
+* Chrono du level
+
+* U.I. Selected Char
+
+
+changements apportés par la version 2.11 : 
+
+* amélioration constructeur de niveau
+
+* buffering des éléments du décor fixes
+
+
+changements apportés par la version 4.0 :
+
+* fixation de nombreux bugs
+
+* integration graphique améliorée
+
+* slide refait
+
+changements apportés par la version 4.1 :
+
+* correction bugs d'animation des perso (devenaient invisibles)
+
+* correction colision laser
+
+* amélioration HUD
+changements apportés par la version 4.4 :
+
+* Integration bullets
+
+* Checkpoints/respawn du joueur quand chute
+
+* tourelle plafond
+
+changements apportés par la version 4.5 :
+
+* Proto Menu
+
+changements apportés par la version 4.6 :  
+
+* changement inputs par souci d'ergonomie(click gaucche pour tirer, droit pour tracer)
+

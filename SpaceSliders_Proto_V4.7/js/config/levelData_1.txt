@@ -1,0 +1,18 @@
+/****************************************************************************/
+/*     Data   *   Sens  *   w   *    h   *           Caracs                 */
+/****************************************************************************/
+/*       0    *   hori  *  140  *   15   *       PF normale serre           */
+/*       1    *   hori  *  140  *   15   *       PF slurm serre             */
+/*       2    *   hori  *  50   *   15   *       PF coin gauche             */
+/*       3    *   hori  *  50   *   15   *       PF coin droit              */
+/*       4    *  verti  *  30   *   140  *   Pilier serre cran droite bas   */
+/*       5    *  verti  *  30   *   140  *   Pilier serre crans droite      */
+/*       6    *  verti  *  40   *   60   *   Pipe cassé haut                */
+/*       7    *  verti  *  40   *   60   *   Pipe cassé bas                 */
+/*       8    *   NA    *  40   *   40   *   Grille Aeration                */
+/*       9    *   NA    *  40   *   40   *   Coin Pipe 1                    */
+/*       10   *   NA    *  40   *   40   *   Coin Pipe 2                    */
+/*       11   *   NA    *  40   *   40   *   Coin Pipe 3                    */
+/*       12   *   NA    *  40   *   40   *   Coin Pipe 4                    */
+/*       13   *   hori  *  140  *   40   *   Pipe normal 1                  */
+/*       14   *   hori  *  40   *   140  *   Pipe normal 2                  */

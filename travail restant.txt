@@ -1,0 +1,33 @@
+
+Travail à réaliser :
+
+
+* constructeur de niveau simplifié
+
+	
+	function Gabin() 
+
+	{
+
+		* scoring ennemis tués (faire apparaitre le nombre de point)
+
+		* générateur de particules?
+
+		* générateur de texte
+		
+		* mécanismes portes
+		
+	}
+
+
+* menu principal canvas (page de regle - selection du niveau)
+
+* menu pause
+
+//// Detection de bugs ///////
+
+* animation du personnage en reverseSliding vers la gauche ne s'affiche pas
+
+* le personnage glisse tout seul sur les plateformes
+
+/////////////////////////////

@@ -1,0 +1,88 @@
+#screen
+{
+	
+	width:1200px;
+	height:600px;
+	margin-left:auto;
+	margin-right:auto;
+	z-index:0;
+	background-color:rgb(0,0,0);
+
+
+}
+#menu
+{
+	position    : absolute;
+	overflow 	  : hidden;
+	width    	  : 1200px;
+	height   	  : 600px;
+	background-image : url(images/Menu/background.png);
+	background-repeat : no-repeat;
+	background-position : 100px 0px;
+	z-index     : 1;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+#touche_play
+{
+	cursor: pointer;
+	position    : relative;
+	width    	  : 300px;
+	height   	  : 70px;
+	font-size : 200%;
+	top : 200px;
+	text-align : center;
+	vertical-align : middle;
+	font-family: "Akashi";
+	 font-style: normal;
+	 font-weight: normal;
+	background-image : url(images/Menu/background_touche.png);
+	background-repeat : no-repeat;
+	z-index     : 2;
+	margin-left:auto;
+	margin-right:auto;
+	line-height: 70px;  
+}
+#touche_score
+{
+	cursor: pointer;
+	position    : relative;
+	width    	  : 300px;
+	height   	  : 70px;
+	top : 220px;
+	font-size : 200%;
+	text-align : center;
+	font-family: "Akashi";
+	vertical-align : middle;
+	 font-style: normal;
+	 font-weight: normal;
+	background-image : url(images/Menu/background_touche.png);
+	background-repeat : no-repeat;
+	z-index     : 2;
+	margin-left:auto;
+	margin-right:auto;
+	line-height: 70px;
+	
+}
+#touche_credit
+{
+	cursor: pointer;
+	position    : relative;
+	width    	  : 300px;
+	height   	  : 70px;
+	top : 240px;
+	font-size : 200%;
+	text-align : center;
+	vertical-align : center;
+	font-family: "Akashi";
+	 font-style: normal;
+	 font-weight: normal;
+	background-image : url(images/Menu/background_touche.png);
+	background-repeat : no-repeat;
+	z-index     : 2;
+	margin-left:auto;
+	margin-right:auto;
+	line-height: 70px;
+}

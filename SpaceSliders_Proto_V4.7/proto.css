@@ -1,0 +1,187 @@
+
+
+#canvas
+{
+ 	position   : absolute;
+ 	display    : block;
+	cursor     : crosshair;
+	z-index    : 10;
+}
+
+
+#canvasBuffering
+{
+ 	position   : absolute;
+ 	display    : block;
+	z-index	   : 1;
+	
+}
+
+#wrapper
+{
+	position    : absolute;
+	overflow 	  : hidden;
+	width    	  : 1200px;
+	height   	  : 600px;
+	border   	  : 2px black solid;
+	z-index     : 1;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+
+#screen
+{
+	
+	width:1200px;
+	height:600px;
+	margin-left:auto;
+	margin-right:auto;
+	z-index:0;
+	background-color:rgb(0,0,0);
+
+
+}
+
+
+.CharactersUI
+{
+    position       : relative;
+    width          : 120px;
+    height         : 150px;
+    vertical-align : middle;
+    background-size: 100% 100%;
+    z-index        : 2;
+	
+}
+
+.CharTitle
+{
+    font-family    : arial, sans-serif;
+    font-size      : 11px;
+    font-weight    : bold;
+}
+
+.AmmoUI
+{
+    position: absolute;
+    height: 8px;
+    top: 87px;
+    left: 25px;
+    background-color : rgba(50,220,50,1);
+}
+
+#Character1
+{
+    left             : 1205px;
+    top              : 0px;
+    background-repeat: no-repeat;
+    background-image : url(images/HUD/HUD_assault_full.png);
+    z-index          : 1;
+	
+}
+
+#Char1Title
+{
+  width: 54px;
+  height: 15px;
+  position: absolute;
+  top: 84px;
+  left: 34px;
+  z-index: 3;
+}
+
+#Character2
+{
+    left             : 1205px;
+	  top				       : 0px;
+    background-repeat: no-repeat;
+    background-image : url(images/HUD/HUD_sniper_full.png);
+	
+}
+
+#Char2Title
+{
+  width: 73px;
+  height: 15px;
+  position: absolute;
+  top: 84px;
+  left: 24px;
+  z-index: 1;
+}
+
+#Character3
+{
+    left             : 1205px;
+    top              : 0px;
+    background-repeat: no-repeat;
+    background-image : url(images/HUD/HUD_sword_full.png);
+	
+}
+
+#Char3Title
+{
+  width: 73px;
+  height: 15px;
+  position: absolute;
+  top: 84px;
+  left: 28px;
+  z-index: 1;
+}
+
+#Character4
+{
+    left             : 1205px;
+	  top		     : 0px;
+    background-repeat: no-repeat;
+    background-image : url(images/HUD/HUD_rocket_full.png);
+	
+}
+
+#Char4Title
+{
+  width: 81px;
+  height: 15px;
+  position: absolute;
+  top: 84px;
+  left: 40px;
+  z-index: 1;
+}
+#scoreBackground
+{
+	position:absolute;
+	width: 300px;
+	height:80px;
+	top:-10px;
+	background-image : url(images/HUD/HUD_score_game.png);
+	z-index:15;
+
+}
+#chrono
+{
+	font-family: "Akashi";
+	 font-style: normal;
+	 font-weight: normal;
+	position:absolute;
+	left:55px;
+	top:55px;
+	width:150px;
+	height:40px;
+	color: rgb(0,0,0);
+	z-index:16;
+	
+}
+#score
+{
+	font-family: "Akashi";
+	 font-style: normal;
+	 font-weight: normal;
+	position:absolute;
+	top:30px;
+	left: 55px;
+	width:150px;
+	height:40px;
+	color: rgb(0,0,0);
+	z-index:16;
+}
